@@ -42,13 +42,11 @@ class Exif:
         Extract all Exif data from image.
         """
         if not os.path.exists(image_path):
-            print(f"'{image_path}' not exists!")
             return None
         data = {}
         gps_coords = {}
         image = Image.open(image_path)
-        if image._getexif() is None:
-            print(f"No Exif data found in '{image_path}'")
+        if not image._getexif():
             return None
         for tag, value in image._getexif().items():
             tag_name = TAGS.get(tag)
