@@ -15,11 +15,11 @@ class Colors(object):
 
 class Config(object):
     ENTER_IMAGE_PATH = f"\n{Colors.GREEN_}Enter Image Path: {Colors.CYAN__}"
-    CHOOSE_FROM_MENU = "\n"
-                       f"\n{Colors.GREEN_}[{Colors.YELLOW}01{Colors.GREEN_}] Get Exif Data"
-                       f"\n{Colors.GREEN_}[{Colors.YELLOW}02{Colors.GREEN_}] Destroy Exif Data"
-                       f"\n{Colors.GREEN_}[{Colors.YELLOW}00{Colors.GREEN_}] Exit Script"
-                       "\n"
+    CHOOSE_FROM_MENU = "\n" \
+                       f"\n{Colors.GREEN_}[{Colors.YELLOW}01{Colors.GREEN_}] Get Exif Data" \
+                       f"\n{Colors.GREEN_}[{Colors.YELLOW}02{Colors.GREEN_}] Destroy Exif Data" \
+                       f"\n{Colors.GREEN_}[{Colors.YELLOW}00{Colors.GREEN_}] Exit Script" \
+                       "\n" \
                        f"\n{Colors.GREEN_}Choose an option: {Colors.CYAN__}"
     
     @staticmethod
