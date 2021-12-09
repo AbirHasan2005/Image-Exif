@@ -19,7 +19,7 @@ class Exif:
             decimal_degrees *= -1
         return decimal_degrees
 
-    def create_google_maps_url(self, gps_coords: list) -> str:
+    def create_google_maps_url(self, gps_coords: dict) -> str:
         """
         Process Google Maps Link.
         """
@@ -37,7 +37,7 @@ class Exif:
         )
         return f"https://maps.google.com/?q={dec_deg_lat},{dec_deg_lon}"
 
-    def extract_data(self, image_path: str):
+    def extract_data(self, image_path: str) -> dict:
         """
         Extract all Exif data from image.
         """
@@ -67,7 +67,7 @@ class Exif:
             data["GoogleMapsUrl"] = self.create_google_maps_url(gps_coords)
         return data
     
-    def remove_data(self, image_path):
+    def remove_data(self, image_path: str) -> bool:
         """
         Remove Exif data from image.
         """
